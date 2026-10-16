@@ -178,6 +178,7 @@
                 <a href="#expertise" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100/50 transition-colors">專業能力</a>
                 <a href="#services" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100/50 transition-colors">服務項目</a>
                 <a href="#portfolio" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100/50 transition-colors">作品案例</a>
+                <a href="#speaking" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100/50 transition-colors">講座實績</a>
                 <a href="#insights" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100/50 transition-colors">技術筆記</a>
                 <a href="#contact" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100/50 transition-colors">聯絡我</a>
             </nav>
@@ -209,6 +210,7 @@
             <a href="#expertise" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">專業能力</a>
             <a href="#services" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">服務項目</a>
             <a href="#portfolio" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">作品案例</a>
+            <a href="#speaking" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">講座實績</a>
             <a href="#insights" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">技術筆記</a>
             <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600">聯絡我</a>
             <div class="pt-2">
@@ -364,32 +366,74 @@
                 </div>
 
                 <!-- Content Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="glass-card rounded-2xl p-8 shadow-sm hover:shadow-md transition-all border border-slate-200/80 reveal-on-scroll">
-                        <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 font-bold text-xl">01</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">現職與定位</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            目前任職於卓越動力資訊股份有限公司，專注於網頁前端切版與 UI 元件實作。秉持細心、務實且持續學習的態度，致力於有效銜接設計與工程。
-                        </p>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                    <!-- Headshot -->
+                    <div class="lg:col-span-5 reveal-on-scroll">
+                        <div class="relative max-w-sm mx-auto">
+                            <div class="absolute -inset-4 bg-gradient-to-tr from-brand-500/25 via-brand-400/10 to-teal-500/25 rounded-[2rem] blur-2xl pointer-events-none" aria-hidden="true"></div>
+                            <div class="absolute -top-3 -left-3 w-24 h-24 border-t-4 border-l-4 border-brand-600 rounded-tl-3xl pointer-events-none" aria-hidden="true"></div>
+                            <div class="absolute -bottom-3 -right-3 w-24 h-24 border-b-4 border-r-4 border-teal-600 rounded-br-3xl pointer-events-none" aria-hidden="true"></div>
+                            <figure class="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200 aspect-[4/5] bg-slate-800">
+                                <img src="images/headshot.jpg" alt="黃郁凌個人形象照" width="800" height="1000" loading="lazy" class="w-full h-full object-cover object-top">
+                                <figcaption class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent text-white">
+                                    <div class="font-bold text-lg">黃郁凌 Huang Yuling</div>
+                                    <div class="text-xs text-slate-200 mt-0.5">Frontend Developer · AI 輔助開發講師</div>
+                                </figcaption>
+                            </figure>
+                            <!-- Floating badge -->
+                            <div class="absolute -right-4 sm:-right-8 top-10 glass-card rounded-2xl px-4 py-3 shadow-lg flex items-center gap-3 animate-float">
+                                <div class="w-9 h-9 rounded-xl bg-accent-500 text-slate-900 flex items-center justify-center">
+                                    <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-sm font-bold text-slate-900">企業內訓講師</div>
+                                    <div class="text-xs text-slate-500">工研院・資策會・國科會</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="glass-card rounded-2xl p-8 shadow-sm hover:shadow-md transition-all border border-slate-200/80 reveal-on-scroll" style="transition-delay: 100ms;">
-                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6 font-bold text-xl">02</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">使用者為核心</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            優秀設計不僅在於視覺，更在於每位使用者皆能順利操作。重視網頁無障礙設計（Accessibility）、語意化 HTML 與清晰流暢的互動體驗。
-                        </p>
-                    </div>
+                    <!-- Cards -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <!-- Card 1 -->
+                        <div class="glass-card rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all border border-slate-200/80 reveal-on-scroll">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 font-bold text-lg">01</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-3">現職與定位</h3>
+                                    <p class="text-slate-600 leading-relaxed text-sm">
+                                        目前任職於卓越動力資訊股份有限公司，專注於網頁前端切版與 UI 元件實作。秉持細心、務實且持續學習的態度，致力於有效銜接設計與工程。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Card 3 -->
-                    <div class="glass-card rounded-2xl p-8 shadow-sm hover:shadow-md transition-all border border-slate-200/80 reveal-on-scroll" style="transition-delay: 200ms;">
-                        <div class="w-12 h-12 rounded-xl bg-eco-50 text-eco-600 flex items-center justify-center mb-6 font-bold text-xl">03</div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3">擁抱 AI 增效</h3>
-                        <p class="text-slate-600 leading-relaxed text-sm">
-                            善用 ChatGPT、Claude 等生成式 AI 工具協助程式編寫、問題除錯與知識整理，在兼顧品質前提下提升開發效率，拓展解決問題思路。
-                        </p>
+                        <!-- Card 2 -->
+                        <div class="glass-card rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all border border-slate-200/80 reveal-on-scroll" style="transition-delay: 100ms;">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 font-bold text-lg">02</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-3">使用者為核心</h3>
+                                    <p class="text-slate-600 leading-relaxed text-sm">
+                                        優秀設計不僅在於視覺，更在於每位使用者皆能順利操作。重視網頁無障礙設計（Accessibility）、語意化 HTML 與清晰流暢的互動體驗。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="glass-card rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-md transition-all border border-slate-200/80 reveal-on-scroll" style="transition-delay: 200ms;">
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-xl bg-eco-50 text-eco-600 flex items-center justify-center shrink-0 font-bold text-lg">03</div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900 mb-3">擁抱 AI 增效</h3>
+                                    <p class="text-slate-600 leading-relaxed text-sm">
+                                        善用 ChatGPT、Claude 等生成式 AI 工具協助程式編寫、問題除錯與知識整理，在兼顧品質前提下提升開發效率，拓展解決問題思路。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -402,7 +446,7 @@
                             「我期許自己不只是將設計稿精準實現，更能以系統化思維、創新工具與使用者導向的理念，打造易於維護且值得信賴的網頁產品。」
                         </blockquote>
                         <div class="mt-6 flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-500 to-teal-500 flex items-center justify-center font-bold text-white text-sm">黃</div>
+                            <img src="images/headshot.jpg" alt="" width="40" height="40" loading="lazy" class="w-10 h-10 rounded-full object-cover object-top ring-2 ring-white/30">
                             <div>
                                 <div class="font-semibold text-sm">黃郁凌 (Huang Yuling)</div>
                                 <div class="text-xs text-slate-400">Frontend Developer</div>
@@ -700,12 +744,103 @@
             </div>
         </section>
 
-        <!-- 06. 技術筆記 Insights Section -->
-        <section id="insights" class="py-24 bg-white relative">
+        <!-- 06. 講座與企業內訓 Speaking Section -->
+        <section id="speaking" class="py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">05 / INSIGHTS</span>
+                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">05 / SPEAKING &amp; TRAINING</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">講座與企業內訓實績</h2>
+                    <p class="mt-4 text-lg text-slate-600">從科技展主舞台到企業教室，將 AI 與前端實務經驗轉化為可落地的方法與工作流程。</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 reveal-on-scroll">
+                    <div class="rounded-2xl bg-brand-50 p-5 text-center"><div class="text-2xl font-bold text-brand-600">政府・法人</div><div class="text-xs text-slate-600 mt-1">國科會・工研院・資策會</div></div>
+                    <div class="rounded-2xl bg-teal-50 p-5 text-center"><div class="text-2xl font-bold text-teal-700">Top3 企業</div><div class="text-xs text-slate-600 mt-1">電信・航空・IC 設計</div></div>
+                    <div class="rounded-2xl bg-eco-50 p-5 text-center"><div class="text-2xl font-bold text-eco-700">主舞台演講</div><div class="text-xs text-slate-600 mt-1">FUTEX 未來科技展</div></div>
+                    <div class="rounded-2xl bg-accent-50 p-5 text-center"><div class="text-2xl font-bold text-accent-700">實作工作坊</div><div class="text-xs text-slate-600 mt-1">AI・機器學習應用</div></div>
+                </div>
+
+                <!-- Gallery -->
+                <div class="grid grid-cols-1 md:grid-cols-4 auto-rows-[240px] gap-4 lg:gap-5">
+                    <figure class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200/80 bg-slate-200 md:col-span-2 md:row-span-2 reveal-on-scroll">
+                        <img src="images/expo-nstc.jpg" alt="國科會 2024 FUTEX 未來科技展舞台演講" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-bold bg-accent-500 text-slate-900">Keynote</span>
+                        <figcaption class="absolute inset-x-0 bottom-0 p-5 lg:p-7 text-white">
+                            <div class="font-bold text-xl lg:text-2xl">國科會</div>
+                            <div class="text-sm text-slate-200 mt-1">FUTEX 未來科技展・GenAI Stars 主舞台演講</div>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200/80 bg-slate-200 reveal-on-scroll" style="transition-delay: 100ms;">
+                        <img src="images/expo-ic-design.jpg" alt="台灣 Top3 IC 設計公司活動舞台分享" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-bold bg-white/90 text-brand-700">Stage</span>
+                        <figcaption class="absolute inset-x-0 bottom-0 p-5  text-white">
+                            <div class="font-bold text-base">台灣 Top3 IC 設計</div>
+                            <div class="text-sm text-slate-200 mt-1">企業活動舞台分享</div>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200/80 bg-slate-200 reveal-on-scroll" style="transition-delay: 200ms;">
+                        <img src="images/training-itri.jpg" alt="工研院企業內訓課堂" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-bold bg-white/90 text-brand-700">Training</span>
+                        <figcaption class="absolute inset-x-0 bottom-0 p-5  text-white">
+                            <div class="font-bold text-base">工研院</div>
+                            <div class="text-sm text-slate-200 mt-1">AI 應用企業內訓</div>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200/80 bg-slate-200 md:col-span-2 reveal-on-scroll">
+                        <img src="images/training-iii.jpg" alt="資策會機器學習實戰課程教室" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-bold bg-white/90 text-brand-700">Workshop</span>
+                        <figcaption class="absolute inset-x-0 bottom-0 p-5  text-white">
+                            <div class="font-bold text-base">資策會</div>
+                            <div class="text-sm text-slate-200 mt-1">機器學習實戰課程</div>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200/80 bg-slate-200 reveal-on-scroll" style="transition-delay: 100ms;">
+                        <img src="images/training-telecom.jpg" alt="台灣 Top3 電信業企業內訓課堂" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-bold bg-white/90 text-brand-700">Training</span>
+                        <figcaption class="absolute inset-x-0 bottom-0 p-5  text-white">
+                            <div class="font-bold text-base">台灣 Top3 電信業</div>
+                            <div class="text-sm text-slate-200 mt-1">企業內訓課程</div>
+                        </figcaption>
+                    </figure>
+                    <figure class="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200/80 bg-slate-200 md:col-span-2 reveal-on-scroll" style="transition-delay: 200ms;">
+                        <img src="images/training-airline.jpg" alt="台灣 Top3 航空業企業內訓課堂" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 px-2.5 py-1 rounded-md text-xs font-bold bg-white/90 text-brand-700">Training</span>
+                        <figcaption class="absolute inset-x-0 bottom-0 p-5  text-white">
+                            <div class="font-bold text-base">台灣 Top3 航空業</div>
+                            <div class="text-sm text-slate-200 mt-1">企業內訓課程</div>
+                        </figcaption>
+                    </figure>
+                    <a href="#contact" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 p-6 text-white flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all reveal-on-scroll" style="transition-delay: 200ms;">
+                        <div class="w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center">
+                            <i class="fa-solid fa-microphone-lines text-lg" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-lg">邀請我開課或演講</div>
+                            <div class="text-sm text-brand-100 mt-1 mb-3">企業內訓・講座・工作坊</div>
+                            <span class="inline-flex items-center gap-2 text-sm font-bold text-accent-400">
+                                <span>聯絡洽談</span>
+                                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. 技術筆記 Insights Section -->
+        <section id="insights" class="py-24 bg-slate-50/50 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">06 / INSIGHTS</span>
                     <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">技術筆記與知識分享</h2>
                     <p class="mt-4 text-lg text-slate-600">記錄前端實作技巧、無障礙設計心得，以及生成式 AI 輔助開發的實務探索。</p>
                 </div>
@@ -769,12 +904,12 @@
             </div>
         </section>
 
-        <!-- 07. 核心技術與實務應用 Practice Section -->
-        <section id="practice" class="py-24 bg-slate-50/50 relative">
+        <!-- 08. 核心技術與實務應用 Practice Section -->
+        <section id="practice" class="py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">06 / PRACTICE</span>
+                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">07 / PRACTICE</span>
                     <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">核心技術與實務應用</h2>
                 </div>
 
@@ -810,13 +945,13 @@
             </div>
         </section>
 
-        <!-- 08. 聯絡與預約 Contact Section -->
+        <!-- 09. 聯絡與預約 Contact Section -->
         <section id="contact" class="py-24 bg-gradient-to-b from-white to-slate-100 relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-teal-500/5 to-eco-500/5 pointer-events-none"></div>
 
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 <div class="glass-card rounded-3xl p-10 lg:p-16 shadow-xl border border-slate-200/80 reveal-on-scroll">
-                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">07 / GET IN TOUCH</span>
+                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">08 / GET IN TOUCH</span>
                     <h2 class="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">讓下一個想法，成為真正可用的產品。</h2>
                     <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
                         無論是前端介面實作、UI 元件建置，或探索 AI 如何融入網站開發流程，都歡迎進一步交流。
