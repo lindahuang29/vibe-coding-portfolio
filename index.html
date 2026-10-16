@@ -45,7 +45,8 @@
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'Noto Sans TC', 'sans-serif']
+                        sans: ['Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace']
                     }
                 }
             }
@@ -56,16 +57,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Custom CSS Styles -->
     <style>
         body {
-            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.75;
+            letter-spacing: 0.01em;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "kern";
             background-color: #F7F9FC;
             color: #2F3A4A;
             overflow-x: hidden;
         }
+
+        /* Typography — 中文標題略增字距、行高收緊，確保清晰易讀 */
+        h1, h2, h3, h4 {
+            letter-spacing: 0.02em;
+            line-height: 1.35;
+            color: #1B2433;
+        }
+        p { text-wrap: pretty; }
+        h1, h2 { text-wrap: balance; }
 
         /* Glassmorphism utility */
         .glass-card {
@@ -167,7 +183,7 @@
                     YL
                 </div>
                 <div>
-                    <span class="font-bold text-lg tracking-tight block text-slate-900 group-hover:text-brand-600 transition-colors">黃郁凌</span>
+                    <span class="font-bold text-lg block text-slate-900 group-hover:text-brand-600 transition-colors">黃郁凌</span>
                     <span class="text-xs text-slate-500 font-medium block">Frontend & AI Dev</span>
                 </div>
             </a>
@@ -249,7 +265,7 @@
 
                         <!-- Main Title with Typewriter Effect -->
                         <div class="space-y-4">
-                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extxl font-bold tracking-tight text-slate-900 leading-[1.2]">
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extxl font-bold text-slate-900 leading-[1.2]">
                                 <span id="typewriter-text" class="gradient-text">以技術實現設計，以 AI 開啟更多可能。</span><span class="typewriter-cursor" aria-hidden="true"></span>
                             </h1>
                             <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
@@ -361,8 +377,32 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">01 / ABOUT ME</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">橋接設計與工程，以細節成就體驗</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">橋接設計與工程，以細節成就體驗</h2>
                     <p class="mt-4 text-lg text-slate-600">專注於將設計構想化為流暢網頁介面，並以生成式 AI 拓展前端開發可能性的開發者。</p>
+                </div>
+
+                <!-- Intro Video -->
+                <div class="max-w-4xl mx-auto mb-20 reveal-on-scroll">
+                    <div class="relative">
+                        <div class="absolute -inset-3 sm:-inset-5 bg-gradient-to-tr from-brand-500/20 via-brand-400/10 to-teal-500/20 rounded-[2rem] blur-2xl pointer-events-none" aria-hidden="true"></div>
+                        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200 bg-slate-900 aspect-video">
+                            <iframe class="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube-nocookie.com/embed/i-gmUH_d_8w?rel=0&amp;modestbranding=1&amp;playsinline=1"
+                                    title="黃郁凌自我介紹影片"
+                                    loading="lazy"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-semibold">
+                            <i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+                            <span>自我介紹影片</span>
+                        </span>
+                        <p class="text-base text-slate-600">用幾分鐘認識我的工作方式、專長，以及我如何運用 AI 打造網站。</p>
+                    </div>
                 </div>
 
                 <!-- Content Grid -->
@@ -442,7 +482,7 @@
                     <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
                     <div class="relative z-10 max-w-3xl">
                         <span class="text-brand-400 text-xs font-semibold uppercase tracking-widest block mb-2">Philosophy</span>
-                        <blockquote class="text-xl lg:text-2xl font-medium leading-relaxed italic text-slate-100">
+                        <blockquote class="text-xl lg:text-2xl font-medium leading-relaxed text-slate-100">
                             「我期許自己不只是將設計稿精準實現，更能以系統化思維、創新工具與使用者導向的理念，打造易於維護且值得信賴的網頁產品。」
                         </blockquote>
                         <div class="mt-6 flex items-center space-x-3">
@@ -463,7 +503,7 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">02 / EXPERTISE</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">紮實前端實作與 AI 協作能力</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">紮實前端實作與 AI 協作能力</h2>
                     <p class="mt-4 text-lg text-slate-600">結合現代網頁技術與 AI 工具，從介面切版、元件化到效能維護的全方位專業技能。</p>
                 </div>
 
@@ -551,7 +591,7 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">03 / SERVICES</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">前端切版與 AI 輔助網站建置服務</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">前端切版與 AI 輔助網站建置服務</h2>
                     <p class="mt-4 text-lg text-slate-600">結合前端技術與 AI 應用，將設計構想化為兼具美感、效能與維護彈性的數位產品。</p>
                 </div>
 
@@ -634,7 +674,7 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">04 / SELECTED WORK</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">精選實作與開發案例</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">精選實作與開發案例</h2>
                     <p class="mt-4 text-lg text-slate-600">展現前端介面實作、UI 元件化與 AI 輔助開發實驗的具體成果與工程思維。</p>
                 </div>
 
@@ -645,7 +685,7 @@
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <span class="px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full">網頁版面與 UI 實作</span>
-                                <span class="text-xs text-slate-400 font-mono">示範案例｜待替換</span>
+                                <span class="text-xs text-slate-500">示範案例｜待替換</span>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">企業形象網站前端介面系統</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6">
@@ -671,7 +711,7 @@
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-semibold rounded-full">UI 元件與互動功能</span>
-                                <span class="text-xs text-slate-400 font-mono">示範案例｜待替換</span>
+                                <span class="text-xs text-slate-500">示範案例｜待替換</span>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">可複用 UI 元件庫與互動介面</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6">
@@ -696,7 +736,7 @@
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <span class="px-3 py-1 bg-eco-50 text-eco-700 text-xs font-semibold rounded-full">AI 輔助開發實驗</span>
-                                <span class="text-xs text-slate-400 font-mono">示範案例｜待替換</span>
+                                <span class="text-xs text-slate-500">示範案例｜待替換</span>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">AI 輔助網站建置與 Vibe Coding 實驗</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6">
@@ -721,7 +761,7 @@
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <span class="px-3 py-1 bg-brand-50 text-brand-700 text-xs font-semibold rounded-full">技術文件與規範</span>
-                                <span class="text-xs text-slate-400 font-mono">示範案例｜待替換</span>
+                                <span class="text-xs text-slate-500">示範案例｜待替換</span>
                             </div>
                             <h3 class="text-2xl font-bold text-slate-900 mb-3">前端開發規範與元件使用手冊</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6">
@@ -750,7 +790,7 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">05 / SPEAKING &amp; TRAINING</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">講座與企業內訓實績</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">講座與企業內訓實績</h2>
                     <p class="mt-4 text-lg text-slate-600">從科技展主舞台到企業教室，將 AI 與前端實務經驗轉化為可落地的方法與工作流程。</p>
                 </div>
 
@@ -841,7 +881,7 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">06 / INSIGHTS</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">技術筆記與知識分享</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">技術筆記與知識分享</h2>
                     <p class="mt-4 text-lg text-slate-600">記錄前端實作技巧、無障礙設計心得，以及生成式 AI 輔助開發的實務探索。</p>
                 </div>
 
@@ -852,7 +892,7 @@
                         <div class="space-y-2 flex-1">
                             <div class="flex items-center space-x-3">
                                 <span class="px-2.5 py-0.5 bg-brand-50 text-brand-700 text-xs font-semibold rounded">前端開發</span>
-                                <span class="text-xs text-slate-400 font-mono">示範主題｜預計撰寫</span>
+                                <span class="text-xs text-slate-500">示範主題｜預計撰寫</span>
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">HTML 語意化與網頁無障礙設計（A11y）的實務要點</h3>
                             <p class="text-slate-600 text-sm">探討如何在日常切版中正確運用語意標籤，兼顧輔助科技閱讀與良好的使用者體驗。</p>
@@ -870,7 +910,7 @@
                         <div class="space-y-2 flex-1">
                             <div class="flex items-center space-x-3">
                                 <span class="px-2.5 py-0.5 bg-teal-50 text-teal-700 text-xs font-semibold rounded">AI 協作開發</span>
-                                <span class="text-xs text-slate-400 font-mono">示範主題｜預計撰寫</span>
+                                <span class="text-xs text-slate-500">示範主題｜預計撰寫</span>
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">善用 ChatGPT 與 Claude 進行前端除錯與程式碼重構</h3>
                             <p class="text-slate-600 text-sm">分享如何透過精準的 Prompt 提問，讓 AI 成為開發過程中的得力助手，加速問題釐清。</p>
@@ -888,7 +928,7 @@
                         <div class="space-y-2 flex-1">
                             <div class="flex items-center space-x-3">
                                 <span class="px-2.5 py-0.5 bg-eco-50 text-eco-700 text-xs font-semibold rounded">UI 元件化</span>
-                                <span class="text-xs text-slate-400 font-mono">示範主題｜預計撰寫</span>
+                                <span class="text-xs text-slate-500">示範主題｜預計撰寫</span>
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">SCSS 樣式架構規劃與可維護元件設計方法</h3>
                             <p class="text-slate-600 text-sm">探討如何建立具備擴充性與模組化的 CSS 樣式結構，讓團隊協作更加順暢無礙。</p>
@@ -910,7 +950,7 @@
                 <!-- Section Header -->
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">07 / PRACTICE</span>
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">核心技術與實務應用</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">核心技術與實務應用</h2>
                 </div>
 
                 <!-- Practice Grid -->
@@ -952,7 +992,7 @@
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                 <div class="glass-card rounded-3xl p-10 lg:p-16 shadow-xl border border-slate-200/80 reveal-on-scroll">
                     <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase mb-3 block">08 / GET IN TOUCH</span>
-                    <h2 class="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">讓下一個想法，成為真正可用的產品。</h2>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-slate-900 mb-4">讓下一個想法，成為真正可用的產品。</h2>
                     <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
                         無論是前端介面實作、UI 元件建置，或探索 AI 如何融入網站開發流程，都歡迎進一步交流。
                     </p>
@@ -1004,21 +1044,166 @@
                         </a>
                     </div>
 
-                    <!-- Placeholder Contact Info -->
-                    <div class="mt-12 pt-8 border-t border-slate-200/60 flex flex-wrap justify-center gap-8 text-sm text-slate-600">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <span class="font-mono">contact@example.com (請替換真實信箱)</span>
+                </div>
+
+                <!-- Contact Info + Form -->
+                <div id="contact-form" class="mt-12 grid grid-cols-1 lg:grid-cols-5 gap-8 text-left">
+                    <!-- Contact Info -->
+                    <aside class="lg:col-span-2 rounded-3xl bg-gradient-to-br from-brand-700 to-brand-900 text-white p-8 lg:p-10 shadow-xl relative overflow-hidden reveal-on-scroll">
+                        <div class="absolute -right-16 -bottom-16 w-56 h-56 rounded-full bg-teal-500/20 blur-3xl pointer-events-none" aria-hidden="true"></div>
+                        <div class="relative">
+                            <span class="text-xs font-semibold tracking-wider text-brand-200 uppercase block mb-2">Contact</span>
+                            <h3 class="text-2xl font-bold text-white mb-3">與我們取得聯繫</h3>
+                            <p class="text-sm text-brand-100 leading-relaxed mb-8">歡迎來信或來電洽詢，我們將於 1–2 個工作天內回覆。</p>
+
+                            <ul class="space-y-6">
+                                <li class="flex items-start gap-4">
+                                    <span class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                                    <div>
+                                        <div class="text-xs text-brand-200 mb-0.5">聯絡信箱</div>
+                                        <a href="mailto:linda.huang@gmail.com" class="font-semibold text-white break-all hover:text-accent-400 transition-colors">linda.huang@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                                    <div>
+                                        <div class="text-xs text-brand-200 mb-0.5">電話</div>
+                                        <div class="font-semibold text-white">(02) 1234-56XX</div>
+                                        <div class="text-sm text-brand-100 mt-0.5">手機：0938-4583XX</div>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <span class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                                    <div>
+                                        <div class="text-xs text-brand-200 mb-0.5">地址</div>
+                                        <address class="not-italic font-semibold text-white leading-relaxed">106021 台北市大安區<br>羅斯福路三段 XX 號 12 樓之二</address>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span>台灣・台北 (Taiwan / Remote)</span>
-                        </div>
+                    </aside>
+
+                    <!-- Form -->
+                    <div class="lg:col-span-3 glass-card rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-200/80 reveal-on-scroll" style="transition-delay: 100ms;">
+                        <h3 class="text-2xl font-bold mb-2">聯絡我們</h3>
+                        <p class="text-sm text-slate-600 mb-8">填寫以下資訊並送出，我們將盡快與您聯絡。標示 <span class="text-accent-600 font-bold">*</span> 為必填。</p>
+
+                        <form id="inquiry-form" class="space-y-6" novalidate>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="cf-name" class="block text-sm font-semibold text-slate-800 mb-2">您的姓名／稱呼 <span class="text-accent-600">*</span></label>
+                                    <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="例如：王小明 / 王經理" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15 transition">
+                                </div>
+                                <div>
+                                    <label for="cf-email" class="block text-sm font-semibold text-slate-800 mb-2">聯絡電子信箱 <span class="text-accent-600">*</span></label>
+                                    <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="name@company.com" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15 transition">
+                                </div>
+                            </div>
+
+                            <fieldset>
+                                <legend class="block text-sm font-semibold text-slate-800 mb-2">您的需求 <span class="text-accent-600">*</span> <span class="font-normal text-slate-500">（可複選）</span></legend>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="need" value="企業內訓" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-solid fa-chalkboard-user text-brand-600" aria-hidden="true"></i>
+                                            <span>企業內訓</span>
+                                        </span>
+                                    </label>
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="need" value="資料科學專案" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-solid fa-chart-line text-brand-600" aria-hidden="true"></i>
+                                            <span>資料科學專案</span>
+                                        </span>
+                                    </label>
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="need" value="系統建置" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-solid fa-code text-brand-600" aria-hidden="true"></i>
+                                            <span>系統建置</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <div>
+                                <label for="cf-message" class="block text-sm font-semibold text-slate-800 mb-2">需求簡介 <span class="text-accent-600">*</span></label>
+                                <textarea id="cf-message" name="message" rows="5" required placeholder="請簡述您的需求內容、預計時程、參與人數或預算範圍等資訊。" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15 transition resize-y"></textarea>
+                            </div>
+
+                            <fieldset>
+                                <legend class="block text-sm font-semibold text-slate-800 mb-2">適合聯絡的時間 <span class="font-normal text-slate-500">（可複選）</span></legend>
+                                <div class="flex flex-wrap gap-3">
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="time" value="平日上午 09:00–12:00" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-regular fa-clock text-brand-600" aria-hidden="true"></i>
+                                            <span>平日上午 09:00–12:00</span>
+                                        </span>
+                                    </label>
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="time" value="平日下午 13:00–18:00" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-regular fa-clock text-brand-600" aria-hidden="true"></i>
+                                            <span>平日下午 13:00–18:00</span>
+                                        </span>
+                                    </label>
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="time" value="平日晚上 18:00–21:00" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-regular fa-clock text-brand-600" aria-hidden="true"></i>
+                                            <span>平日晚上 18:00–21:00</span>
+                                        </span>
+                                    </label>
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="time" value="週末假日" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-regular fa-clock text-brand-600" aria-hidden="true"></i>
+                                            <span>週末假日</span>
+                                        </span>
+                                    </label>
+                                    <label class="relative cursor-pointer">
+                                        <input type="checkbox" name="time" value="皆可" class="peer sr-only">
+                                        <span class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition peer-checked:border-brand-600 peer-checked:bg-brand-50 peer-checked:text-brand-700 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-500/20 hover:border-brand-300">
+                                            <i class="fa-regular fa-clock text-brand-600" aria-hidden="true"></i>
+                                            <span>皆可</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <p id="cf-error" class="hidden text-sm font-medium text-red-600" role="alert"></p>
+
+                            <button type="submit" id="cf-submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-500 hover:bg-accent-400 text-slate-900 font-bold rounded-xl shadow-lg shadow-accent-500/30 hover:-translate-y-0.5 transition-all focus:outline-none focus:ring-4 focus:ring-accent-500/30 disabled:opacity-70 disabled:cursor-wait disabled:hover:translate-y-0">
+                                <i class="fa-solid fa-paper-plane" aria-hidden="true" data-icon></i>
+                                <span data-label>送出需求</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Form Success Modal -->
+    <div id="cf-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="cf-modal-title" aria-describedby="cf-modal-desc">
+        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" data-close></div>
+        <div id="cf-modal-panel" class="relative w-full max-w-md rounded-3xl bg-white p-8 sm:p-10 text-center shadow-2xl ring-1 ring-slate-200 opacity-0 scale-95 transition-all duration-300">
+            <div class="absolute inset-x-0 top-0 h-1.5 rounded-t-3xl bg-gradient-to-r from-brand-600 via-brand-500 to-teal-600"></div>
+            <div class="mx-auto mb-6 w-20 h-20 rounded-full bg-eco-50 ring-8 ring-eco-50/50 flex items-center justify-center">
+                <div class="w-14 h-14 rounded-full bg-eco-500 text-white flex items-center justify-center shadow-lg shadow-eco-500/30">
+                    <i class="fa-solid fa-check text-2xl" aria-hidden="true"></i>
+                </div>
+            </div>
+            <h3 id="cf-modal-title" class="text-2xl font-bold mb-3">需求已送出</h3>
+            <p id="cf-modal-desc" class="text-slate-600 leading-relaxed mb-8">需求已送出，我們將盡快與您聯絡！</p>
+            <button type="button" class="w-full px-6 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-md transition-colors focus:outline-none focus:ring-4 focus:ring-brand-500/30" data-close>確定</button>
+            <button type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-700 flex items-center justify-center transition-colors" aria-label="關閉" data-close>
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
@@ -1120,6 +1305,102 @@
                     navbar.classList.add('shadow-md', 'bg-white/90');
                 } else {
                     navbar.classList.remove('shadow-md', 'bg-white/90');
+                }
+            });
+
+            // 5. Inquiry Form → 背景送出至 Google 表單（不跳轉）
+            const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSc1Kw3v2UfyXHbZnKkTLbvdrH7p74sG_UGrJcIJjwwBgDpGfA/formResponse';
+            const GOOGLE_FORM_ENTRIES = {
+                name: 'entry.588998168',     // 您的姓名/稱呼
+                email: 'entry.476214014',    // 聯絡電子信箱
+                need: 'entry.1610329698',    // 您的需求
+                message: 'entry.1646642689', // 需求簡介
+                time: 'entry.1091995575'     // 適合聯絡的時間
+            };
+
+            const inquiryForm = document.getElementById('inquiry-form');
+            const formError = document.getElementById('cf-error');
+            const submitBtn = document.getElementById('cf-submit');
+            const submitIcon = submitBtn.querySelector('[data-icon]');
+            const submitLabel = submitBtn.querySelector('[data-label]');
+            const modal = document.getElementById('cf-modal');
+            const modalPanel = document.getElementById('cf-modal-panel');
+            let lastFocused = null;
+
+            const showError = (msg) => {
+                formError.textContent = msg;
+                formError.classList.remove('hidden');
+            };
+
+            const setSubmitting = (busy) => {
+                submitBtn.disabled = busy;
+                submitIcon.className = busy ? 'fa-solid fa-spinner fa-spin' : 'fa-solid fa-paper-plane';
+                submitLabel.textContent = busy ? '送出中…' : '送出需求';
+            };
+
+            const openModal = () => {
+                lastFocused = document.activeElement;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+                requestAnimationFrame(() => {
+                    modalPanel.classList.remove('opacity-0', 'scale-95');
+                    modalPanel.classList.add('opacity-100', 'scale-100');
+                });
+                modal.querySelector('button[data-close]').focus();
+            };
+
+            const closeModal = () => {
+                modalPanel.classList.add('opacity-0', 'scale-95');
+                modalPanel.classList.remove('opacity-100', 'scale-100');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                    if (lastFocused) lastFocused.focus();
+                }, 200);
+            };
+
+            modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+            });
+
+            inquiryForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const data = new FormData(inquiryForm);
+                const name = (data.get('name') || '').trim();
+                const email = (data.get('email') || '').trim();
+                const message = (data.get('message') || '').trim();
+                const needs = data.getAll('need');
+                const times = data.getAll('time');
+
+                let error = '';
+                if (!name) error = '請填寫您的姓名／稱呼。';
+                else if (!email || !inquiryForm.email.checkValidity()) error = '請填寫正確的電子信箱。';
+                else if (needs.length === 0) error = '請至少選擇一項需求。';
+                else if (!message) error = '請填寫需求簡介。';
+                if (error) return showError(error);
+                formError.classList.add('hidden');
+
+                // Google 表單題型皆為簡答，複選項目以「、」合併為單一文字
+                const payload = new URLSearchParams();
+                payload.append(GOOGLE_FORM_ENTRIES.name, name);
+                payload.append(GOOGLE_FORM_ENTRIES.email, email);
+                payload.append(GOOGLE_FORM_ENTRIES.need, needs.join('、'));
+                payload.append(GOOGLE_FORM_ENTRIES.message, message);
+                payload.append(GOOGLE_FORM_ENTRIES.time, times.length ? times.join('、') : '未指定');
+
+                setSubmitting(true);
+                try {
+                    // no-cors：Google 不回傳 CORS 標頭，回應不可讀，但資料會成功寫入
+                    await fetch(GOOGLE_FORM_ACTION, { method: 'POST', mode: 'no-cors', body: payload });
+                    inquiryForm.reset();
+                    openModal();
+                } catch (err) {
+                    showError('送出失敗，請檢查網路連線後再試一次，或直接來信 linda.huang@gmail.com。');
+                } finally {
+                    setSubmitting(false);
                 }
             });
         });
